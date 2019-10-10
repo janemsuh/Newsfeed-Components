@@ -85,6 +85,24 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Office Hours Reimagined',
+    date: 'Mar 4, 2019',
+    firstParagraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A diam maecenas sed enim ut sem viverra. Nunc sed velit dignissim sodales ut eu. Vel turpis nunc eget lorem dolor sed viverra ipsum. Pellentesque elit eget gravida cum. Velit euismod in pellentesque massa. Erat pellentesque adipiscing commodo elit at imperdiet dui. Lacus luctus accumsan tortor posuere ac ut. Amet risus nullam eget felis eget nunc lobortis mattis aliquam. Facilisis mauris sit amet massa vitae tortor. Odio ut enim blandit volutpat maecenas volutpat blandit. Et molestie ac feugiat sed lectus vestibulum. Non arcu risus quis varius. Eu feugiat pretium nibh ipsum. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Semper viverra nam libero justo laoreet. Tincidunt praesent semper feugiat nibh. Consequat semper viverra nam libero justo. Ac turpis egestas sed tempus.',
+    
+    secondParagraph: 'Dolor morbi non arcu risus. In fermentum posuere urna nec tincidunt praesent semper feugiat. Lectus nulla at volutpat diam. Vitae tortor condimentum lacinia quis vel eros donec ac. Tristique senectus et netus et malesuada fames ac turpis egestas. Porttitor lacus luctus accumsan tortor posuere. Viverra ipsum nunc aliquet bibendum enim. Pretium fusce id velit ut tortor pretium. At quis risus sed vulputate odio ut. Enim nunc faucibus a pellentesque sit amet. A arcu cursus vitae congue mauris rhoncus aenean. Ac tincidunt vitae semper quis lectus nulla. Magnis dis parturient montes nascetur ridiculus. Pharetra sit amet aliquam id diam maecenas ultricies mi eget.',
+    
+    thirdParagraph: 'Cras sed felis eget velit aliquet sagittis id. Dis parturient montes nascetur ridiculus mus mauris. Fusce id velit ut tortor pretium viverra suspendisse potenti nullam. Nunc sed velit dignissim sodales ut eu sem integer vitae. In eu mi bibendum neque. Viverra aliquet eget sit amet tellus cras adipiscing enim eu. Diam donec adipiscing tristique risus nec feugiat. Vulputate dignissim suspendisse in est. Vulputate sapien nec sagittis aliquam. Amet cursus sit amet dictum sit amet.'
+  },
+  {
+    title: 'Code Challenges vs Networking',
+    date: 'Jul 1, 2019',
+    firstParagraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tortor id aliquet lectus proin nibh nisl condimentum id. Leo duis ut diam quam nulla porttitor massa id. Non arcu risus quis varius quam quisque id diam. Id diam maecenas ultricies mi eget mauris pharetra. Ut eu sem integer vitae justo. Arcu felis bibendum ut tristique et egestas quis. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Imperdiet proin fermentum leo vel orci. Vulputate eu scelerisque felis imperdiet proin. Enim facilisis gravida neque convallis a cras semper auctor.',
+
+    secondParagraph: 'Amet risus nullam eget felis eget. Arcu cursus vitae congue mauris. Sed enim ut sem viverra aliquet. Ac felis donec et odio pellentesque. In ornare quam viverra orci sagittis. Habitasse platea dictumst quisque sagittis. Mauris augue neque gravida in fermentum. Ullamcorper sit amet risus nullam. Ut aliquam purus sit amet luctus venenatis. Lacus luctus accumsan tortor posuere ac. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Imperdiet dui accumsan sit amet. Nibh mauris cursus mattis molestie. Eu turpis egestas pretium aenean pharetra magna ac.',
+    
+    thirdParagraph: 'Sed cras ornare arcu dui vivamus. Sed sed risus pretium quam vulputate dignissim. Imperdiet nulla malesuada pellentesque elit eget gravida cum sociis. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Cursus sit amet dictum sit amet justo. Molestie nunc non blandit massa. Turpis egestas pretium aenean pharetra. Pharetra magna ac placerat vestibulum lectus mauris ultrices eros in. Et netus et malesuada fames. Molestie at elementum eu facilisis sed odio morbi quis. Ultrices in iaculis nunc sed augue lacus. Neque volutpat ac tincidunt vitae. Morbi non arcu risus quis varius. Nisi porta lorem mollis aliquam. Lobortis elementum nibh tellus molestie nunc non blandit. Facilisi nullam vehicula ipsum a. Mi quis hendrerit dolor magna eget est. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim. Donec pretium vulputate sapien nec sagittis aliquam malesuada. Vitae et leo duis ut.'
   }
 ];
 
@@ -102,7 +120,7 @@ const data = [
   Hint: You will need to use createElement more than once here!
 
   Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.
-
+  
   Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
 
   Step 3: return the entire component.
@@ -112,3 +130,44 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+
+function articleCreator(data) {
+
+  const article = document.createElement('div');
+  const articleTitle = document.createElement('h2');
+  const articleDate = document.createElement('p');
+  const para1 = document.createElement('p')
+  const para2 = document.createElement('p');
+  const para3 = document.createElement('p');
+  const button = document.createElement('span');
+
+  article.classList.add('article');
+  articleDate.classList.add('date');
+  button.classList.add('expandButton');
+
+  articleTitle.textContent = data.title;
+  articleDate.textContent = data.date;
+  para1.textContent = data.firstParagraph;
+  para2.textContent = data.secondParagraph;
+  para3.textContent = data.thirdParagraph;
+  button.textContent = 'Click to read';
+
+  button.addEventListener('click', (event) => {
+    article.classList.toggle('article-open');
+  });
+
+  article.appendChild(articleTitle);
+  article.appendChild(articleDate);
+  article.appendChild(para1);
+  article.appendChild(para2);
+  article.appendChild(para3);
+  article.appendChild(button);
+
+  return article;
+};
+
+const articles = document.querySelector('.articles');
+
+data.map(item => {
+  articles.appendChild(articleCreator(item));
+})
